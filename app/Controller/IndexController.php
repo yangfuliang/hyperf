@@ -74,7 +74,8 @@ EOD;
         $decoded = JWT::decode($token, new Key($publicKey, 'RS256'));
 
         $decoded_array = (array) $decoded;
-        echo "Decode:\n" . print_r($decoded_array, true) . "\n";
+
+        return $decoded_array;
     }
 
 }
